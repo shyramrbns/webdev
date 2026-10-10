@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shyra - Web Development Activities</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<!-- Web Development: lessons, notes, activities. Bento na magkakaibang laki, nasa gitna ang hero.
+     Walang <style> block. Isang style attribute lang sa <body>: teal #45A29E, bright cyan #66FCF1, at max-width ng page. -->
+<body class="bg-dark text-white mx-auto"
+  style="max-width:1440px; --bs-info-rgb:102,252,241; --bs-success-rgb:69,162,158; --bs-info-bg-subtle:#0b2b2a; --bs-border-opacity:.55;">
+
+  <div class="container-fluid d-flex flex-column gap-3 py-3 py-md-4 px-3 px-md-4 px-xl-5">
+
+    <!-- ============ SECTION 1: BENTO (kaliwa 3 | gitna 6 | kanan 3) ============
+         phone: hero muna, tapos stacked | md: hero, tapos kaliwa + kanan | lg pataas: 3 + 6 + 3, hero sa gitna -->
+    <div class="row g-3">
+
+      <!-- CENTER: Activity 1-2 sa taas, HERO sa gitna, Container sa baba -->
+      <div class="col-12 col-lg-6 order-lg-2 d-flex flex-column gap-3">
+
+        <div class="row g-3">
+
+          <div class="col-12 col-sm-6 d-flex">
+            <div tabindex="0" data-hover
+              class="card w-100 bg-info-subtle border-info rounded-4 p-4 justify-content-center shadow">
+              <div data-front>
+                <h3 class="h4 text-info">Activity 1</h3>
+                <p class="text-light mb-2">Bento layout using HTML and Bootstrap.</p>
+                <div>
+                  <span class="badge text-bg-info">HTML</span>
+                  <span class="badge text-bg-info">Bootstrap</span>
+                </div>
+              </div>
+              <div data-back class="d-none">
+                <h3 class="h4 text-info">Activity 1</h3>
+                <p class="text-light mb-0">A bento layout made with rows, columns and cards.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 d-flex">
+            <div tabindex="0" data-hover data-bs-theme="light"
+              class="card w-100 bg-info-subtle border-info rounded-4 p-4 justify-content-center shadow">
+              <div data-front>
+                <h3 class="h4 text-info-emphasis">Activity 2</h3>
+                <p class="text-body mb-2">Coming soon.</p>
+                <div><span class="badge bg-white text-info-emphasis border border-info-subtle">Upcoming</span></div>
+              </div>
+              <div data-back class="d-none">
+                <h3 class="h4 text-info-emphasis">Activity 2</h3>
+                <p class="text-body mb-0">Not added yet.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- HERO -->
+        <div tabindex="0" data-hover
+          class="card flex-grow-1 w-100 bg-body-secondary border-success rounded-4 p-4 p-md-5 py-md-5 text-center justify-content-center shadow">
+          <div data-front>
+            <h1 class="display-3 fw-bold text-info">Web Development Activities</h1>
+            <p class="lead fs-4 text-light mb-4">Lessons, notes and class activities in one place.</p>
+          </div>
+          <div data-back class="d-none">
+            <h1 class="display-3 fw-bold text-info">Web Development Activities</h1>
+            <p class="lead fs-4 text-light mb-4">Covers JavaScript history and types, HTML and Bootstrap terms, the grid system and breakpoints.</p>
+          </div>
+          <div>
+            <a href="../" class="btn btn-dark btn-lg px-5 py-3 border border-success text-success fw-semibold">Back to Portfolio</a>
+          </div>
+          <!-- Paalala: nagbabago ang laman ng cards kapag hinover o tinap -->
+          <p class="text-info opacity-75 mt-4 mb-0">Hover over (or tap) a card to see more.</p>
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-12 col-sm-6 d-flex">
+            <div tabindex="0" data-hover
+              class="card w-100 bg-success border-success rounded-4 p-4 justify-content-center shadow">
+              <div data-front>
+                <h3 class="h4 text-dark">Container</h3>
+                <p class="text-dark mb-2">Holds and organizes the page content.</p>
+                <div><span class="badge bg-dark text-info">.container</span></div>
+              </div>
+              <div data-back class="d-none">
+                <h3 class="h4 text-dark">Container</h3>
+                <p class="text-dark mb-0">Bootstrap's .container uses predefined maximum widths that change with screen size.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 d-flex">
+            <div tabindex="0" data-hover
+              class="card w-100 bg-info-subtle border-info rounded-4 p-4 justify-content-center shadow">
+              <div data-front>
+                <h3 class="h4 text-info">Container Fluid</h3>
+                <p class="text-light mb-2">Always full width.</p>
+                <div><span class="badge text-bg-info">.container-fluid</span></div>
+              </div>
+              <div data-back class="d-none">
+                <h3 class="h4 text-info">Container Fluid</h3>
+                <p class="text-light mb-0">.container-fluid takes up 100% of the available width.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- LEFT: JavaScript notes -->
+      <div class="col-12 col-md-6 col-lg-3 order-lg-1 d-flex flex-column gap-3">
+
+        <div tabindex="0" data-hover
+          class="card flex-grow-1 w-100 bg-body-secondary border-info rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-info">History of JavaScript</h3>
+            <p class="text-light small mb-2">From Mocha to JavaScript.</p>
+            <div>
+              <span class="badge text-bg-info">Mocha</span>
+              <span class="badge text-bg-info">LiveScript</span>
+              <span class="badge text-bg-info">JavaScript</span>
+            </div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-info">History of JavaScript</h3>
+            <p class="text-light small mb-0">Brendan Eich created it at Netscape. It was named Mocha, then LiveScript, and became JavaScript in 1995. It is not the same as Java.</p>
+          </div>
+        </div>
+
+        <div tabindex="0" data-hover data-bs-theme="light"
+          class="card flex-grow-1 w-100 bg-success-subtle border-success rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-success-emphasis">Key Names</h3>
+            <p class="text-body small mb-2">The people and companies behind it.</p>
+            <div>
+              <span class="badge bg-white text-success-emphasis border border-success-subtle">Netscape</span>
+              <span class="badge bg-white text-success-emphasis border border-success-subtle">Microsoft</span>
+              <span class="badge bg-white text-success-emphasis border border-success-subtle">Oracle</span>
+            </div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-success-emphasis">Key Names</h3>
+            <p class="text-body small mb-0">Netscape Navigator is where it started. Microsoft added similar scripting to Internet Explorer in 1995. Oracle bought Sun Microsystems in 2010.</p>
+          </div>
+        </div>
+
+        <div tabindex="0" data-hover
+          class="card flex-grow-1 w-100 bg-success border-success rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-dark">Types of JavaScript</h3>
+            <p class="text-dark small mb-2">Internal and external scripts.</p>
+            <div>
+              <span class="badge bg-dark text-info">Internal</span>
+              <span class="badge bg-dark text-info">External</span>
+            </div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-dark">Types of JavaScript</h3>
+            <p class="text-dark small mb-0">Internal goes inside the HTML file in a <code class="text-dark">&lt;script&gt;</code> tag. External is a separate .js file linked with <code class="text-dark">&lt;script src="script.js"&gt;</code>.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Bootstrap -->
+      <div class="col-12 col-md-6 col-lg-3 order-lg-3 d-flex flex-column gap-3">
+
+        <div tabindex="0" data-hover data-bs-theme="light"
+          class="card flex-grow-1 w-100 bg-info-subtle border-info rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-info-emphasis">Grid System</h3>
+            <p class="text-body small mb-2">Bootstrap uses 12 columns per row.</p>
+            <div>
+              <span class="badge bg-white text-info-emphasis border border-info-subtle">12</span>
+              <span class="badge bg-white text-info-emphasis border border-info-subtle">6</span>
+              <span class="badge bg-white text-info-emphasis border border-info-subtle">4</span>
+              <span class="badge bg-white text-info-emphasis border border-info-subtle">3</span>
+            </div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-info-emphasis">Grid System</h3>
+            <p class="text-body small mb-0">12 is full width, 6 is half, 4 is one-third and 3 is one-fourth. The sizes in a row add up to 12.</p>
+          </div>
+        </div>
+
+        <div tabindex="0" data-hover
+          class="card flex-grow-1 w-100 bg-info-subtle border-info rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-info">Breakpoints</h3>
+            <p class="text-light small mb-2">Six default screen sizes.</p>
+            <div>
+              <span class="badge text-bg-info">col-</span>
+              <span class="badge text-bg-info">col-sm-</span>
+              <span class="badge text-bg-info">col-md-</span>
+              <span class="badge text-bg-info">col-lg-</span>
+              <span class="badge text-bg-info">col-xl-</span>
+              <span class="badge text-bg-info">col-xxl-</span>
+            </div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-info">Breakpoints</h3>
+            <p class="text-light small mb-0">Extra small, small, medium, large, extra large and extra extra large. Each one has its own class prefix.</p>
+          </div>
+        </div>
+
+        <div tabindex="0" data-hover
+          class="card flex-grow-1 w-100 bg-body-secondary border-info rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-info">Cards</h3>
+            <p class="text-light small mb-2">Box-like components for displaying content.</p>
+            <div>
+              <span class="badge text-bg-info">Images</span>
+              <span class="badge text-bg-info">Text</span>
+              <span class="badge text-bg-info">Buttons</span>
+            </div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-info">Cards</h3>
+            <p class="text-light small mb-0">Cards display content such as images, text and buttons. Every box on this page is a card.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============ SECTION 2: HTML at Bootstrap terms (3 / 3 / 2 / 2 / 2) ============ -->
+    <div class="row g-3">
+
+      <div class="col-12 col-sm-6 col-lg-3 d-flex">
+        <div tabindex="0" data-hover data-bs-theme="light"
+          class="card w-100 bg-success-subtle border-success rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-success-emphasis">Row</h3>
+            <p class="text-body small mb-2">Lines up columns horizontally.</p>
+            <div><span class="badge bg-white text-success-emphasis border border-success-subtle">.row</span></div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-success-emphasis">Row</h3>
+            <p class="text-body small mb-0">A row organizes columns horizontally. Columns always go inside a row.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 d-flex">
+        <div tabindex="0" data-hover data-bs-theme="light"
+          class="card w-100 bg-info-subtle border-info rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-info-emphasis">Column</h3>
+            <p class="text-body small mb-2">Holds the content inside a row.</p>
+            <div><span class="badge bg-white text-info-emphasis border border-info-subtle">.col-6</span></div>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-info-emphasis">Column</h3>
+            <p class="text-body small mb-0">Columns share the 12-column grid. For example, col-6 takes half of the row.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 col-lg-2 d-flex">
+        <div tabindex="0" data-hover
+          class="card w-100 bg-success border-success rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-dark">ID</h3>
+            <p class="text-dark small mb-0">A unique name for one element.</p>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-dark">ID</h3>
+            <p class="text-dark small mb-0">An id identifies a single HTML element, so it is used once per page.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 col-lg-2 d-flex">
+        <div tabindex="0" data-hover
+          class="card w-100 bg-body-secondary border-info rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-info">Class</h3>
+            <p class="text-light small mb-0">Groups elements together.</p>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-info">Class</h3>
+            <p class="text-light small mb-0">A class can be used on many elements to give them the same styling or behavior.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 col-lg-2 d-flex">
+        <div tabindex="0" data-hover data-bs-theme="light"
+          class="card w-100 bg-success-subtle border-success rounded-4 p-3 justify-content-center shadow">
+          <div data-front>
+            <h3 class="h5 text-success-emphasis">Margin</h3>
+            <p class="text-body small mb-0">Space outside the border.</p>
+          </div>
+          <div data-back class="d-none">
+            <h3 class="h5 text-success-emphasis">Margin</h3>
+            <p class="text-body small mb-0">Margin is the space outside an element's border that separates it from other elements.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ SECTION 3: languages (6 / 6) ============ -->
+    <div class="row g-3">
+
+      <div class="col-12 col-sm-6 d-flex">
+        <div tabindex="0" data-hover
+          class="card w-100 bg-info-subtle border-info rounded-4 p-3 text-center justify-content-center shadow">
+          <div data-front><h4 class="h5 text-info mb-0">HTML</h4></div>
+          <div data-back class="d-none"><p class="text-light small mb-0">The structure of every page.</p></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 d-flex">
+        <div tabindex="0" data-hover data-bs-theme="light"
+          class="card w-100 bg-success-subtle border-success rounded-4 p-3 text-center justify-content-center shadow">
+          <div data-front><h4 class="h5 text-success-emphasis mb-0">JavaScript</h4></div>
+          <div data-back class="d-none"><p class="text-body small mb-0">Makes pages interactive.</p></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- Hover: ipinapalit ang laman ng card sa caption sa loob mismo ng card -->
+  <script>
+    document.querySelectorAll('[data-hover]').forEach(function (card) {
+      var front = card.querySelector('[data-front]');
+      var back = card.querySelector('[data-back]');
+      function show() { front.classList.add('d-none'); back.classList.remove('d-none'); }
+      function hide() { back.classList.add('d-none'); front.classList.remove('d-none'); }
+      card.addEventListener('mouseenter', show);
+      card.addEventListener('mouseleave', hide);
+      card.addEventListener('focus', show);
+      card.addEventListener('blur', hide);
+    });
+  </script>
+</body>
+
+</html>
