@@ -27,7 +27,6 @@
       position: relative;
     }
 
-    /* ---------- Background effects ---------- */
     .bg-layer {
       position: fixed;
       inset: 0;
@@ -86,7 +85,6 @@
       100% { transform: translateY(-105vh) scale(.4); opacity: 0; }
     }
 
-    /* ---------- Layout ---------- */
     .page {
       position: relative;
       z-index: 1;
@@ -95,7 +93,6 @@
       padding: 4.5rem 1.25rem 3rem;
     }
 
-    /* ---------- Hero ---------- */
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -166,7 +163,6 @@
       to   { width: 90px; opacity: 1; }
     }
 
-    /* ---------- Entrance animation ---------- */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -178,7 +174,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ---------- Activity cards ---------- */
     .a-wrap { perspective: 1000px; }
 
     .a-card {
@@ -206,11 +201,9 @@
 
     .a-card--green { --accent: #45a29e; }
 
-    /* not clickable yet */
     .a-card--soon { cursor: default; }
     .a-card--soon:hover .a-arrow { transform: none; background: transparent; color: var(--accent); }
 
-    /* mouse spotlight */
     .a-card::before {
       content: "";
       position: absolute;
@@ -221,7 +214,6 @@
       pointer-events: none;
     }
 
-    /* shine sweep */
     .a-card::after {
       content: "";
       position: absolute;
@@ -338,7 +330,6 @@
       transform: translateX(6px);
     }
 
-    /* ---------- Back button ---------- */
     .btn-back {
       position: relative;
       overflow: hidden;
@@ -387,7 +378,6 @@
 
 <body>
 
-  <!-- Animated background -->
   <div class="bg-layer" aria-hidden="true">
     <div class="bg-grid"></div>
     <div class="orb orb-1"></div>
@@ -409,7 +399,6 @@
       <div class="divider"></div>
     </header>
 
-    <!-- Cards are generated from the list in the script below -->
     <section class="row g-4 g-lg-5 justify-content-center" id="activityList"></section>
 
     <div class="text-center mt-5 pt-3 reveal" style="--i:6">
@@ -424,15 +413,13 @@
     crossorigin="anonymous"></script>
 
   <script>
-    // To add a new activity, copy one block and change the values.
-    // "link" is the file of that activity, relative to this page.
-    // "color" can be "teal" or "green".
+
     var activities = [
       {
         title: "Activity 1",
         description: "Bento layout using HTML and Bootstrap. Covers JavaScript history, containers, grid system and breakpoints.",
         tags: ["HTML", "Bootstrap", "Bento Layout"],
-        link: "../BENTO/",
+        link: "webdev/BENTO/index.html",
         icon: "&lt;/&gt;",
         color: "teal"
       },
@@ -476,7 +463,6 @@
 
       var card = col.querySelector(".a-card");
 
-      // Mouse spotlight + 3D tilt
       if (canHover && !reduceMotion && !a.soon) {
         card.addEventListener("mousemove", function (e) {
           var r = card.getBoundingClientRect();
@@ -494,7 +480,6 @@
       }
     });
 
-    // Floating particles
     if (!reduceMotion) {
       var box = document.getElementById("particles");
       for (var p = 0; p < 22; p++) {
