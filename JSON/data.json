@@ -1,0 +1,818 @@
+{
+    "title": "Semicolon Showdown",
+    "maxQuestions": 15,
+    "levels": {
+        "easy": {
+            "label": "Easy",
+            "seconds": 10,
+            "passPercent": 75,
+            "info": "HTML, CSS, JS and Java basics"
+        },
+        "medium": {
+            "label": "Medium",
+            "seconds": 10,
+            "passPercent": 70,
+            "info": "Syntax, concepts and language history"
+        },
+        "hard": {
+            "label": "Hard",
+            "seconds": 10,
+            "passPercent": 60,
+            "info": "Tricky output and deep history"
+        },
+        "extreme": {
+            "label": "Extreme",
+            "seconds": 10,
+            "passPercent": 60,
+            "info": "Only for real coders"
+        }
+    },
+    "questions": {
+        "easy": [
+            {
+                "q": "What does HTML stand for?",
+                "choices": [
+                    "HyperText Markup Language",
+                    "High Tech Modern Language",
+                    "Hyperlinks and Text Mark Language",
+                    "Home Tool Markup Language"
+                ],
+                "answer": 0,
+                "explain": "HTML is the language that gives a web page its structure.",
+                "lang": "HTML",
+                "code": ""
+            },
+            {
+                "q": "Which symbol starts a single-line comment in JavaScript?",
+                "choices": [
+                    "`#`",
+                    "`<!--`",
+                    "`--`",
+                    "`//`"
+                ],
+                "answer": 3,
+                "explain": "JavaScript uses `//` for one-line comments and `/* */` for blocks.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "What does CSS stand for?",
+                "choices": [
+                    "Computer Style Sheets",
+                    "Colorful Style Sheets",
+                    "Cascading Style Sheets",
+                    "Creative Styling System"
+                ],
+                "answer": 2,
+                "explain": "Styles 'cascade', so later or more specific rules can override earlier ones.",
+                "lang": "CSS",
+                "code": ""
+            },
+            {
+                "q": "Which symbol starts a comment in Python?",
+                "choices": [
+                    "`//`",
+                    "`#`",
+                    "`/*`",
+                    "`--`"
+                ],
+                "answer": 1,
+                "explain": "Python uses `#` for comments.",
+                "lang": "Python",
+                "code": ""
+            },
+            {
+                "lang": "Java",
+                "q": "Which method is the entry point of a Java program?",
+                "code": "public static void ___(String[] args) {",
+                "choices": [
+                    "`main`",
+                    "`start`",
+                    "`run`",
+                    "`init`"
+                ],
+                "answer": 0,
+                "explain": "The JVM starts running your program from `main`."
+            },
+            {
+                "q": "What does the `<br>` tag do?",
+                "choices": [
+                    "Makes text bold",
+                    "Adds a line break",
+                    "Creates a border",
+                    "Starts a new page"
+                ],
+                "answer": 1,
+                "explain": "`<br>` breaks the line and continues on the next one.",
+                "lang": "HTML",
+                "code": ""
+            },
+            {
+                "q": "Which file extension is used for JavaScript files?",
+                "choices": [
+                    ".java",
+                    ".script",
+                    ".js",
+                    ".jv"
+                ],
+                "answer": 2,
+                "explain": "JavaScript files end in `.js`.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "Which CSS property changes the text color?",
+                "choices": [
+                    "`font-color`",
+                    "`text-style`",
+                    "`color`",
+                    "`foreground`"
+                ],
+                "answer": 2,
+                "explain": "Use `color: red;` to change text color.",
+                "lang": "CSS",
+                "code": ""
+            },
+            {
+                "lang": "Python",
+                "q": "What is the output?",
+                "code": "print(2 + 3)",
+                "choices": [
+                    "5",
+                    "23",
+                    "2 + 3",
+                    "An error"
+                ],
+                "answer": 0,
+                "explain": "Numbers are added, so the result is 5."
+            },
+            {
+                "lang": "Java",
+                "q": "Which keyword creates a class in Java?",
+                "code": "",
+                "choices": [
+                    "`class`",
+                    "`struct`",
+                    "`def`",
+                    "`object`"
+                ],
+                "answer": 0,
+                "explain": "Example: `public class Student { }`."
+            },
+            {
+                "lang": "HTML",
+                "q": "Which attribute is missing?",
+                "code": "<a ___=\"page.html\">Home</a>",
+                "choices": [
+                    "href",
+                    "src",
+                    "link",
+                    "url"
+                ],
+                "answer": 0,
+                "explain": "`href` holds the link destination."
+            },
+            {
+                "q": "Which tag creates a link?",
+                "choices": [
+                    "`<a>`",
+                    "`<link>`",
+                    "`<url>`",
+                    "`<href>`"
+                ],
+                "answer": 0,
+                "explain": "`<a href=\"...\">` makes a clickable link. `<link>` is for external resources like CSS.",
+                "code": ""
+            },
+            {
+                "q": "What does JSON stand for?",
+                "choices": [
+                    "Java Standard Object Network",
+                    "JavaScript Object Notation",
+                    "Java Source Output Notation",
+                    "JavaScript Online Notes"
+                ],
+                "answer": 1,
+                "explain": "JSON is a simple text format for storing and sending data.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "lang": "Java",
+                "q": "Which file extension do Java source files use?",
+                "code": "",
+                "choices": [
+                    ".java",
+                    ".jav",
+                    ".js",
+                    ".jsrc"
+                ],
+                "answer": 0,
+                "explain": "Compiled Java becomes `.class` files."
+            },
+            {
+                "lang": "Java",
+                "q": "What kind of data does this variable hold?",
+                "code": "int age = 18;",
+                "choices": [
+                    "A whole number",
+                    "Text",
+                    "True or false",
+                    "A decimal"
+                ],
+                "answer": 0,
+                "explain": "`int` stores whole numbers."
+            }
+        ],
+        "medium": [
+            {
+                "q": "What does `===` check in JavaScript?",
+                "choices": [
+                    "Only the value",
+                    "Only the type",
+                    "Both value and type",
+                    "If a variable exists"
+                ],
+                "answer": 2,
+                "explain": "`5 === '5'` is false, but `5 == '5'` is true.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "Which CSS property adds space INSIDE an element's border?",
+                "choices": [
+                    "`margin`",
+                    "`padding`",
+                    "`gap`",
+                    "`outline`"
+                ],
+                "answer": 1,
+                "explain": "`padding` is inside the border. `margin` is outside.",
+                "lang": "CSS",
+                "code": ""
+            },
+            {
+                "q": "What is `<!DOCTYPE html>` for?",
+                "choices": [
+                    "It loads CSS",
+                    "It tells the browser the page uses HTML5",
+                    "It adds a title",
+                    "It comments the code"
+                ],
+                "answer": 1,
+                "explain": "It makes the browser render the page in standards mode.",
+                "lang": "HTML",
+                "code": ""
+            },
+            {
+                "q": "Which keyword defines a function in Python?",
+                "choices": [
+                    "`function`",
+                    "`func`",
+                    "`def`",
+                    "`fn`"
+                ],
+                "answer": 2,
+                "explain": "Example: `def greet():`.",
+                "lang": "Python",
+                "code": ""
+            },
+            {
+                "q": "Which company originally developed Java?",
+                "choices": [
+                    "Microsoft",
+                    "Sun Microsystems",
+                    "Apple",
+                    "IBM"
+                ],
+                "answer": 1,
+                "explain": "Sun Microsystems created Java. Oracle bought Sun in 2010.",
+                "lang": "Java",
+                "code": ""
+            },
+            {
+                "q": "What does `git commit` do?",
+                "choices": [
+                    "Uploads code to GitHub",
+                    "Saves a snapshot of staged changes locally",
+                    "Deletes the repository",
+                    "Downloads a project"
+                ],
+                "answer": 1,
+                "explain": "`git push` is the one that uploads to a remote like GitHub.",
+                "lang": "Git",
+                "code": ""
+            },
+            {
+                "q": "What does the SQL command `SELECT` do?",
+                "choices": [
+                    "Deletes rows",
+                    "Retrieves data",
+                    "Creates a table",
+                    "Updates a column"
+                ],
+                "answer": 1,
+                "explain": "Example: `SELECT name FROM students;`.",
+                "lang": "SQL",
+                "code": ""
+            },
+            {
+                "lang": "PHP",
+                "q": "What does this PHP code do?",
+                "code": "<?php echo 'Hello'; ?>",
+                "choices": [
+                    "Prints Hello on the page",
+                    "Creates a CSS rule",
+                    "Declares a Java class",
+                    "Reads a database"
+                ],
+                "answer": 0,
+                "explain": "`echo` outputs text."
+            },
+            {
+                "q": "Who created JavaScript?",
+                "choices": [
+                    "James Gosling",
+                    "Brendan Eich",
+                    "Guido van Rossum",
+                    "Tim Berners-Lee"
+                ],
+                "answer": 1,
+                "explain": "Brendan Eich built it at Netscape in 1995.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "Which CSS layout module arranges items in a row or column?",
+                "choices": [
+                    "Flexbox",
+                    "Z-index",
+                    "Overflow",
+                    "Pseudo-elements"
+                ],
+                "answer": 0,
+                "explain": "Use `display: flex;` to turn it on.",
+                "lang": "CSS",
+                "code": ""
+            },
+            {
+                "q": "What is the default `display` value of a `<div>`?",
+                "choices": [
+                    "`inline`",
+                    "`flex`",
+                    "`block`",
+                    "`grid`"
+                ],
+                "answer": 2,
+                "explain": "Block elements start on a new line and take the full width.",
+                "lang": "HTML",
+                "code": ""
+            },
+            {
+                "q": "Who is known as the creator of Java?",
+                "choices": [
+                    "James Gosling",
+                    "Dennis Ritchie",
+                    "Linus Torvalds",
+                    "Bjarne Stroustrup"
+                ],
+                "answer": 0,
+                "explain": "James Gosling led the team that built Java at Sun.",
+                "lang": "Java",
+                "code": ""
+            },
+            {
+                "lang": "SQL",
+                "q": "What does this query return?",
+                "code": "SELECT * FROM users WHERE age > 18;",
+                "choices": [
+                    "Users older than 18",
+                    "Users exactly 18",
+                    "All tables",
+                    "Nothing, it deletes rows"
+                ],
+                "answer": 0,
+                "explain": "`WHERE` filters the rows."
+            },
+            {
+                "lang": "Java",
+                "q": "Which type stores text in Java?",
+                "code": "",
+                "choices": [
+                    "`String`",
+                    "`Str`",
+                    "`Text`",
+                    "`Word`"
+                ],
+                "answer": 0,
+                "explain": "`String` starts with a capital S."
+            },
+            {
+                "lang": "Java",
+                "q": "What is printed?",
+                "code": "for (int i = 0; i < 3; i++) {\n  System.out.println(i);\n}",
+                "choices": [
+                    "0, 1, 2 (one per line)",
+                    "1, 2, 3",
+                    "0, 1, 2, 3",
+                    "Nothing"
+                ],
+                "answer": 0,
+                "explain": "The loop runs while `i < 3`."
+            }
+        ],
+        "hard": [
+            {
+                "q": "What are the three states of a JavaScript Promise?",
+                "choices": [
+                    "open, closed, done",
+                    "pending, fulfilled, rejected",
+                    "start, running, end",
+                    "new, active, failed"
+                ],
+                "answer": 1,
+                "explain": "A Promise starts pending, then becomes fulfilled or rejected.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "In which year did Sun Microsystems publicly introduce Java?",
+                "choices": [
+                    "1991",
+                    "1995",
+                    "1999",
+                    "2003"
+                ],
+                "answer": 1,
+                "explain": "Java was introduced in 1995, and Java 1.0 shipped in early 1996.",
+                "lang": "Java",
+                "code": ""
+            },
+            {
+                "q": "Python was first released in which year?",
+                "choices": [
+                    "1985",
+                    "1991",
+                    "1998",
+                    "2004"
+                ],
+                "answer": 1,
+                "explain": "Guido van Rossum released Python 0.9.0 in 1991.",
+                "lang": "Python",
+                "code": ""
+            },
+            {
+                "q": "Who proposed CSS in 1994?",
+                "choices": [
+                    "Håkon Wium Lie",
+                    "Tim Berners-Lee",
+                    "Linus Torvalds",
+                    "Rasmus Lerdorf"
+                ],
+                "answer": 0,
+                "explain": "Håkon Wium Lie proposed CSS while working with Tim Berners-Lee at CERN.",
+                "lang": "CSS",
+                "code": ""
+            },
+            {
+                "q": "HTML5 became an official W3C Recommendation in which year?",
+                "choices": [
+                    "2004",
+                    "2008",
+                    "2014",
+                    "2019"
+                ],
+                "answer": 2,
+                "explain": "The W3C published HTML5 as a Recommendation in October 2014.",
+                "lang": "HTML",
+                "code": ""
+            },
+            {
+                "q": "What does `git rebase` do?",
+                "choices": [
+                    "Deletes a branch",
+                    "Replays your commits on top of another base",
+                    "Downloads remote changes only",
+                    "Undoes the last push"
+                ],
+                "answer": 1,
+                "explain": "It rewrites history to make a cleaner, linear log.",
+                "lang": "Git",
+                "code": ""
+            },
+            {
+                "q": "What is 'hoisting' in JavaScript?",
+                "choices": [
+                    "Declarations are processed before code runs, so they seem moved to the top",
+                    "Moving files to a server",
+                    "Compressing JS files",
+                    "Running code in parallel"
+                ],
+                "answer": 0,
+                "explain": "That's why you can call a function declaration before the line where it's written.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "Before it was called Java, the language was named?",
+                "choices": [
+                    "Oak",
+                    "Mocha",
+                    "Cobra",
+                    "Bean"
+                ],
+                "answer": 0,
+                "explain": "It was named Oak after a tree outside Gosling's office.",
+                "lang": "Java",
+                "code": ""
+            },
+            {
+                "lang": "Python",
+                "q": "What is the output?",
+                "code": "print(3 * 'ab')",
+                "choices": [
+                    "ababab",
+                    "'ab3'",
+                    "6",
+                    "An error"
+                ],
+                "answer": 0,
+                "explain": "A string times a number repeats the string."
+            },
+            {
+                "q": "Which CSS rule has the highest specificity (ignoring `!important`)?",
+                "choices": [
+                    "An element selector like `p`",
+                    "A class selector like `.box`",
+                    "An ID selector like `#main`",
+                    "An inline `style` attribute"
+                ],
+                "answer": 3,
+                "explain": "Inline styles beat IDs, which beat classes, which beat elements.",
+                "lang": "CSS",
+                "code": ""
+            },
+            {
+                "q": "What does `defer` do on a `<script>` tag?",
+                "choices": [
+                    "Blocks HTML parsing until it runs",
+                    "Downloads in the background, runs after the HTML is parsed",
+                    "Loads only on click",
+                    "Runs the script twice"
+                ],
+                "answer": 1,
+                "explain": "Deferred scripts also keep their order.",
+                "lang": "HTML",
+                "code": ""
+            },
+            {
+                "q": "What is the result of `[] + []` in JavaScript?",
+                "choices": [
+                    "`0`",
+                    "`[]`",
+                    "`''` (empty string)",
+                    "`undefined`"
+                ],
+                "answer": 2,
+                "explain": "Both arrays become empty strings, then get joined.",
+                "lang": "JavaScript",
+                "code": ""
+            },
+            {
+                "q": "What does `Array.reduce()` return?",
+                "choices": [
+                    "A new array of the same length",
+                    "A single accumulated value",
+                    "Always a number",
+                    "The first element"
+                ],
+                "answer": 1,
+                "explain": "It combines all items into one result, like a sum.",
+                "code": ""
+            },
+            {
+                "lang": "Java",
+                "q": "Which keyword is used to inherit from a class?",
+                "code": "class Dog ___ Animal { }",
+                "choices": [
+                    "`extends`",
+                    "`implements`",
+                    "`inherits`",
+                    "`super`"
+                ],
+                "answer": 0,
+                "explain": "`implements` is for interfaces."
+            },
+            {
+                "lang": "Java",
+                "q": "What is printed?",
+                "code": "System.out.println(\"Java\".charAt(1));",
+                "choices": [
+                    "a",
+                    "J",
+                    "v",
+                    "An error"
+                ],
+                "answer": 0,
+                "explain": "Index counting starts at 0."
+            }
+        ],
+        "extreme": [
+            {
+                "lang": "JavaScript",
+                "q": "What is the output?",
+                "code": "console.log([1, 2, 3] + [4]);",
+                "choices": [
+                    "`1,2,34`",
+                    "`[1,2,3,4]`",
+                    "`10`",
+                    "`NaN`"
+                ],
+                "answer": 0,
+                "explain": "Arrays turn into strings with `+`, then join."
+            },
+            {
+                "lang": "Java",
+                "q": "What is the output?",
+                "code": "String a = \"hi\";\nString b = new String(\"hi\");\nSystem.out.println(a == b);",
+                "choices": [
+                    "true",
+                    "false",
+                    "hi",
+                    "An error"
+                ],
+                "answer": 1,
+                "explain": "`==` compares references. Use `.equals()` for text."
+            },
+            {
+                "lang": "Python",
+                "q": "What is the output?",
+                "code": "print(bool('False'))",
+                "choices": [
+                    "True",
+                    "False",
+                    "None",
+                    "An error"
+                ],
+                "answer": 0,
+                "explain": "Any non-empty string is truthy."
+            },
+            {
+                "lang": "CSS",
+                "q": "What is the box model order, from outside to inside?",
+                "code": "",
+                "choices": [
+                    "margin, border, padding, content",
+                    "padding, margin, border, content",
+                    "content, padding, border, margin",
+                    "border, margin, content, padding"
+                ],
+                "answer": 0,
+                "explain": "Margin is outermost, content is innermost."
+            },
+            {
+                "lang": "History",
+                "q": "Which was the first widely used graphical web browser (1993)?",
+                "code": "",
+                "choices": [
+                    "Mosaic",
+                    "Netscape Navigator",
+                    "Internet Explorer",
+                    "Chrome"
+                ],
+                "answer": 0,
+                "explain": "NCSA Mosaic made the web popular."
+            },
+            {
+                "lang": "SQL",
+                "q": "Which clause filters groups after `GROUP BY`?",
+                "code": "",
+                "choices": [
+                    "`WHERE`",
+                    "`HAVING`",
+                    "`ORDER BY`",
+                    "`LIMIT`"
+                ],
+                "answer": 1,
+                "explain": "`WHERE` filters rows before grouping. `HAVING` filters groups."
+            },
+            {
+                "lang": "JavaScript",
+                "q": "What is the output?",
+                "code": "console.log(1 < 2 < 3, 3 > 2 > 1);",
+                "choices": [
+                    "true true",
+                    "true false",
+                    "false true",
+                    "false false"
+                ],
+                "answer": 1,
+                "explain": "`3 > 2` is true, and `true > 1` is false."
+            },
+            {
+                "lang": "Java",
+                "q": "Which keyword stops a class from being inherited?",
+                "code": "",
+                "choices": [
+                    "`final`",
+                    "`static`",
+                    "`private`",
+                    "`sealed`"
+                ],
+                "answer": 0,
+                "explain": "A `final` class cannot be extended."
+            },
+            {
+                "lang": "Python",
+                "q": "What is the output?",
+                "code": "def f(x, l=[]):\n    l.append(x)\n    return l\nprint(f(1), f(2))",
+                "choices": [
+                    "[1] [2]",
+                    "[1, 2] [1, 2]",
+                    "[1] [1, 2]",
+                    "An error"
+                ],
+                "answer": 1,
+                "explain": "The default list is created once and shared."
+            },
+            {
+                "lang": "History",
+                "q": "About how long did Brendan Eich take to create the first JavaScript?",
+                "code": "",
+                "choices": [
+                    "10 days",
+                    "10 weeks",
+                    "10 months",
+                    "10 years"
+                ],
+                "answer": 0,
+                "explain": "The first version was written in about 10 days in 1995."
+            },
+            {
+                "lang": "JavaScript",
+                "q": "What is the output?",
+                "code": "var a = 1;\n{ var a = 2; }\nconsole.log(a);",
+                "choices": [
+                    "1",
+                    "2",
+                    "undefined",
+                    "An error"
+                ],
+                "answer": 1,
+                "explain": "`var` is function-scoped, not block-scoped."
+            },
+            {
+                "lang": "Java",
+                "q": "What is printed?",
+                "code": "System.out.println(1 + 2 + \"3\" + 4 + 5);",
+                "choices": [
+                    "3345",
+                    "12345",
+                    "1239",
+                    "345"
+                ],
+                "answer": 0,
+                "explain": "1 + 2 = 3 first, then everything after the string joins as text."
+            },
+            {
+                "lang": "JavaScript",
+                "q": "What is the output?",
+                "code": "console.log(typeof undefined, typeof NaN);",
+                "choices": [
+                    "undefined number",
+                    "undefined undefined",
+                    "object number",
+                    "number number"
+                ],
+                "answer": 0,
+                "explain": "NaN is technically a number."
+            },
+            {
+                "lang": "Java",
+                "q": "What is printed?",
+                "code": "Integer a = 127, b = 127;\nSystem.out.println(a == b);",
+                "choices": [
+                    "true",
+                    "false",
+                    "127",
+                    "A compile error"
+                ],
+                "answer": 0,
+                "explain": "Integers from -128 to 127 are cached, so both point to the same object."
+            },
+            {
+                "lang": "JavaScript",
+                "q": "What is the output?",
+                "code": "console.log('3' - 1, '3' + 1);",
+                "choices": [
+                    "2 31",
+                    "2 4",
+                    "31 2",
+                    "NaN NaN"
+                ],
+                "answer": 0,
+                "explain": "`-` converts to numbers, `+` joins strings."
+            }
+        ]
+    }
+}

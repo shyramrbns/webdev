@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semicolon Showdown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div id="deco" class="deco" aria-hidden="true"></div>
+  <main>
+    <p id="error" class="error" hidden>Can't load data.json. Open this folder with VS Code Live Server or host it online (GitHub Pages).</p>
+
+    <!-- HOME -->
+    <section id="home" class="hero" hidden>
+      <div class="logo mono">&lt;/&gt;</div>
+      <h1>Semicolon<span>;</span><br>Showdown</h1>
+      <p class="sub">The coding quiz for people who totally never forget a semicolon.</p>
+      <div class="rule"></div>
+      <button id="start" class="btn big-btn">Start</button>
+      <p id="facts" class="facts"></p>
+      <div class="row">
+        <a class="btn ghost small" href="../index.html">&larr; Back to Activities</a>
+        <a class="btn ghost small" href="https://shyramrbns.github.io/">Back to Portfolio</a>
+      </div>
+    </section>
+
+    <!-- PICK LEVEL -->
+    <section id="levels" hidden>
+      <h2 class="title">Pick your level</h2>
+      <p class="sub">Tap a level to begin. The clock starts on the first question.</p>
+      <div id="grid" class="grid"></div>
+      <div class="row">
+        <button id="back-home" class="btn ghost small">Back</button>
+        <a class="btn ghost small" href="../index.html">&larr; Back to Activities</a>
+        <a class="btn ghost small" href="https://shyramrbns.github.io/">Back to Portfolio</a>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="panel" hidden>
+      <div class="hud"><span id="qcount"></span><span id="live"></span><span id="clock" class="mono"></span></div>
+      <div class="track"><div id="fill"></div></div>
+      <span id="lang" class="tag"></span>
+      <h2 id="question"></h2>
+      <pre id="code" hidden><code></code></pre>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback" hidden>
+        <b id="ftitle"></b>
+        <p id="ftext"></p>
+        <button id="next" class="btn small">Next question</button>
+      </div>
+      <button id="quit" class="quit">Quit</button>
+    </section>
+
+    <!-- RESULT -->
+    <section id="result" class="panel center" hidden>
+      <div id="stamp" class="stamp"></div>
+      <p id="big" class="big"></p>
+      <p id="msg" class="muted"></p>
+      <p id="record" class="record" hidden>New record!</p>
+      <dl class="stats" id="stats"></dl>
+      <div id="missed-box" class="left" hidden><h3>Questions you missed</h3><ul id="missed"></ul></div>
+      <div class="row">
+        <button id="retry" class="btn">Try again</button>
+        <button id="menu" class="btn ghost">Change level</button>
+        <button id="home-btn" class="btn ghost">Home</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
