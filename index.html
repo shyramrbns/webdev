@@ -430,6 +430,14 @@
         link: "JSON/index.html",
         icon: "{ }",
         color: "green"
+      },
+      {
+        title: "Activity 3",
+        description: "ALPHA FORM, a Sony Alpha camera guide that loads 3D models from the Sketchfab API. Browse the lineup, compare specs and explore each camera in 3D.",
+        tags: ["API", "3D Viewer"],
+        link: "API/index.html",
+        icon: "&#9673;",
+        color: "green"
       }
     ];
 
@@ -439,7 +447,7 @@
 
     activities.forEach(function (a, i) {
       var col = document.createElement("div");
-      col.className = "col-12 col-md-6 d-flex a-wrap reveal";
+      col.className = "col-12 col-md-6 col-lg-4 d-flex a-wrap reveal";
       col.style.setProperty("--i", i + 3);
 
       var tags = a.tags.map(function (t) {

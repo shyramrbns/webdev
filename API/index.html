@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ALPHA FORM — A closer look at the Sony Alpha system</title>
+    <meta name="description"
+        content="ALPHA FORM is an independent guide to Sony Alpha cameras: browse the lineup, compare specifications and explore each camera in 3D.">
+    <meta name="theme-color" content="#101113">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <canvas id="sparks" aria-hidden="true"></canvas>
+    <a class="skip" href="#cameras">Skip to cameras</a>
+
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a class="brand" href="#home" aria-label="ALPHA FORM — home">
+                <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+                    <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path
+                        d="M16 2 L22 12 M30 16 L20 22 M16 30 L10 20 M2 16 L12 10 M25.9 6 L17 8 M26 26 L24 17 M6 26 L15 24 M6 6 L8 15"
+                        stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" />
+                    <circle cx="16" cy="16" r="3.2" fill="#C8743A" />
+                </svg>
+                <span class="brand__word">ALPHA FORM</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+                <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
+            </button>
+            <nav id="navLinks" class="nav__links" aria-label="Primary">
+                <a href="#home" data-nav="home">Home</a>
+                <a href="#cameras" data-nav="cameras">Cameras</a>
+                <a href="#lineup" data-nav="lineup">Lineup</a>
+                <a href="#inside" data-nav="inside">Inside the Alpha</a>
+                <a href="#lenses" data-nav="lenses">Lenses</a>
+                <a href="#compare" data-nav="compare">Compare <span class="badge" id="compareBadge" hidden>0</span></a>
+                <a href="#gallery" data-nav="gallery">Gallery</a>
+                <a href="#favorites" data-nav="favorites">Favorites <span class="badge" id="favBadge"
+                        hidden>0</span></a>
+                <a class="nav__back" href="../index.html">&larr; Activities</a>
+                <a class="nav__back" href="https://shyramrbns.github.io/">&larr; Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <noscript>
+            <p class="container notice">ALPHA FORM needs JavaScript to load camera models.</p>
+        </noscript>
+
+        <section id="home" class="hero" aria-labelledby="hero-title" data-section>
+            <div class="hero__light" aria-hidden="true"></div>
+            <div class="hero__grid container">
+                <div class="hero__copy">
+                    <p class="eyebrow">Sony Alpha system</p>
+                    <h1 id="hero-title">Beyond<br>the Frame.</h1>
+                    <p class="lede">Browse the Sony Alpha lineup, compare specifications, and explore each camera in 3D.
+                    </p>
+                    <ul class="hero__chips" aria-label="System highlights">
+                        <li style="--i:0">E-mount</li>
+                        <li style="--i:1">Full frame</li>
+                        <li style="--i:2">APS-C</li>
+                        <li style="--i:3">Interactive 3D</li>
+                    </ul>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="#cameras">Explore Cameras</a>
+                        <a class="btn btn--ghost" href="#inside">Explore in 3D</a>
+                    </div>
+                    <p class="tagline">A closer look at the Sony Alpha system.</p>
+                </div>
+                <figure class="hero__media" id="heroMedia">
+                    <div class="hero__glow" aria-hidden="true"></div>
+                    <div class="skeleton skeleton--hero" aria-hidden="true"></div>
+                    <div class="hero__floor" aria-hidden="true"></div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="cameras" class="section" aria-labelledby="cameras-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="cameras-title">Sony Alpha Cameras</h2>
+                    <p class="section__sub">Sony Alpha cameras as interactive 3D models. Open any camera for its
+                        specifications.</p>
+                </header>
+
+                <div class="toolbar reveal" role="search" aria-label="Filter cameras">
+                    <label class="field field--grow"><span>Search model</span>
+                        <input type="search" id="fQuery" placeholder="e.g. A7 IV" autocomplete="off">
+                    </label>
+                    <label class="field"><span>Series</span><select id="fSeries"></select></label>
+                    <label class="field"><span>Sort by</span>
+                        <select id="fSort">
+                            <option value="old">Release order (oldest first)</option>
+                            <option value="new">Release order (newest first)</option>
+                            <option value="name">Model name (A–Z)</option>
+                            <option value="likes">Most liked</option>
+                        </select>
+                    </label>
+                    <button class="btn btn--ghost" id="clearFilters" type="button">Clear Filters</button>
+                </div>
+                <p class="count" id="resultCount" aria-live="polite"></p>
+
+                <div class="grid" id="cameraGrid" aria-busy="true"></div>
+                <div id="cameraStatus"></div>
+            </div>
+        </section>
+
+        <section id="lineup" class="section" aria-labelledby="lineup-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="lineup-title">Alpha Lineup</h2>
+                    <p class="section__sub">Every Sony Alpha E-mount model in release order. Open Details for the full
+                        specifications and their sources.</p>
+                </header>
+                <div class="seg reveal" id="lineupFilter" role="group" aria-label="Filter lineup by series"></div>
+                <div class="reveal" id="lineupOut"></div>
+            </div>
+        </section>
+
+        <section id="inside" class="section section--dark" aria-labelledby="inside-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="inside-title">INSIDE THE ALPHA</h2>
+                    <p class="section__sub">Rotate a camera, click a part, and read what it does.</p>
+                </header>
+
+                <div class="ana-controls reveal">
+                    <label class="field field--grow"><span>3D model</span><select id="vModel"></select></label>
+                    <div class="ana-controls__btns">
+                        <button class="btn btn--primary" type="button" id="vExplode"
+                            title="Pull the camera apart to see its parts">Explore Internals</button>
+                        <button class="btn btn--ghost" type="button" id="vReset"
+                            title="Go back to the starting angle">Reset View</button>
+                    </div>
+                </div>
+                <dl class="ana-help reveal">
+                    <div>
+                        <dt>Explore Internals</dt>
+                        <dd>Pulls the camera apart so you can see each part. Works only on models with separate parts.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Reset View</dt>
+                        <dd>Puts the camera back to its starting angle and puts the parts back together.</dd>
+                    </div>
+                </dl>
+
+                <div class="ana ana--viewer reveal">
+                    <div class="viewer" id="viewerStage">
+                        <div class="viewer__poster" id="viewerPoster">
+                            <div class="viewer__img" id="viewerPosterImg"></div>
+                            <button class="btn btn--primary" type="button" id="viewerLoad">Load interactive 3D
+                                model</button>
+                        </div>
+                        <div class="viewer__frame" id="viewerFrameWrap"></div>
+                        <p class="viewer__status" id="viewerStatus" role="status" aria-live="polite"></p>
+                        <p class="viewer__hover" id="viewerHover" hidden></p>
+                    </div>
+                    <aside class="panel" id="viewerPanel" aria-label="Component details">
+                        <div id="partInfo" aria-live="polite"></div>
+                        <label class="sr-only" for="partFilter">Search parts</label>
+                        <input class="parts-filter" type="search" id="partFilter" placeholder="Search Alpha parts"
+                            autocomplete="off">
+                        <h4 id="guideH">Sony Alpha parts guide</h4>
+                        <ul class="parts" id="guideList"></ul>
+                        <h4>Parts found in this model</h4>
+                        <ul class="parts" id="partsList"></ul>
+                        <h4 id="annoH" hidden>Annotations by the author</h4>
+                        <ul class="parts" id="annoList" hidden></ul>
+                    </aside>
+                </div>
+                <p class="note" id="viewerCredit">Drag to rotate, scroll or pinch to zoom. Hover a part for its name and
+                    click it to see what it does. Part names come from each 3D model, so detail varies.</p>
+            </div>
+        </section>
+
+        <section id="lenses" class="section" aria-labelledby="lenses-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="lenses-title">Lens Explorer</h2>
+                    <p class="section__sub">Select a hotspot to learn what each part of a lens does.</p>
+                </header>
+                <div class="ana reveal">
+                    <div class="ana__stage" id="lensStage"></div>
+                    <aside class="panel" id="lensPanel" aria-live="polite" aria-label="Lens component details"></aside>
+                </div>
+                <p class="note">Simplified illustration of a typical interchangeable lens. Layouts differ between
+                    lenses.</p>
+
+                <div class="guide reveal" id="guide">
+                    <h3>General camera guide</h3>
+                    <div class="guide__list">
+                        <details open>
+                            <summary>Mode dial</summary>
+                            <p>Auto lets the camera choose everything. P (program) sets exposure while you adjust the
+                                rest. A (aperture priority) lets you set the aperture and the camera picks the shutter
+                                speed. S (shutter priority) is the reverse. M (manual) gives you all three. Movie is for
+                                video.</p>
+                        </details>
+                        <details>
+                            <summary>Aperture, shutter speed and ISO</summary>
+                            <p>Aperture (the f-number) controls how much light enters: a lower number lets in more light
+                                and blurs the background more. Shutter speed controls how long the sensor is exposed:
+                                fast speeds freeze motion, slow ones blur it. ISO brightens the image electronically:
+                                higher values help in the dark but add noise.</p>
+                        </details>
+                        <details>
+                            <summary>Autofocus basics</summary>
+                            <p>Press the shutter button halfway to focus. Single AF locks focus once, which suits still
+                                subjects. Continuous AF keeps refocusing, which suits moving subjects. Eye AF, where a
+                                camera offers it, follows a person’s or animal’s eye.</p>
+                        </details>
+                        <details>
+                            <summary>Changing lenses</summary>
+                            <p>Switch the camera off, hold the lens release button and turn the lens to remove it. Fit
+                                the new lens by lining up the marks and turning until it clicks. Keep the body facing
+                                down while the mount is open so dust stays out.</p>
+                        </details>
+                        <details>
+                            <summary>Handling and care</summary>
+                            <p>Hold the grip with your right hand and support the lens with your left. Keep caps on when
+                                you are not shooting, clean the lens with a blower and a microfibre cloth, and never
+                                touch the sensor.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" class="section section--dark" aria-labelledby="compare-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="compare-title">Compare Cameras</h2>
+                    <p class="section__sub">Choose up to three cameras and see how their specifications differ.</p>
+                </header>
+                <div class="compare-controls reveal">
+                    <label class="field field--grow"><span>Add a camera</span><select id="compareAdd"></select></label>
+                    <button class="btn btn--primary" type="button" id="compareAddBtn">Add Camera</button>
+                    <button class="btn btn--ghost" type="button" id="compareClear">Clear Comparison</button>
+                </div>
+                <div id="compareOut" class="compare reveal"></div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section" aria-labelledby="gallery-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="gallery-title">Gallery</h2>
+                    <p class="section__sub">Preview images of the cameras. Open one to view it full screen.</p>
+                </header>
+                <div class="gallery" id="galleryGrid"></div>
+                <div class="center"><button class="btn btn--ghost" type="button" id="galleryMore" hidden>Load more
+                        images</button></div>
+            </div>
+        </section>
+
+        <section id="favorites" class="section section--dark" aria-labelledby="fav-title" data-section>
+            <div class="container">
+                <header class="section__head reveal">
+                    <h2 id="fav-title">Favorites</h2>
+                    <p class="section__sub">Cameras you save are kept in this browser.</p>
+                </header>
+                <div class="grid grid--fav" id="favGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div>
+                <p class="brand brand--footer"><span class="brand__word">ALPHA FORM</span></p>
+                <p class="footer__tag">A closer look at the Sony Alpha system.</p>
+                <p class="footer__text">A guide to Sony Alpha cameras. Browse the lineup, compare specifications, and
+                    explore each camera and its parts in 3D.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h3 class="footer__h">Explore</h3>
+                <ul>
+                    <li><a href="#cameras">Cameras</a></li>
+                    <li><a href="#lineup">Lineup</a></li>
+                    <li><a href="#inside">Inside the Alpha</a></li>
+                    <li><a href="#lenses">Lenses</a></li>
+                    <li><a href="#compare">Compare</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#favorites">Favorites</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h3 class="footer__h">Credits</h3>
+                <p class="footer__text">3D models and preview images come from <a href="https://sketchfab.com"
+                        target="_blank" rel="noopener noreferrer">Sketchfab</a>. Each model belongs to its author and is
+                    used under its own licence. Specifications come from the sources listed with each camera.</p>
+            </div>
+        </div>
+        <div class="container footer__back">
+            <a class="btn btn--ghost" href="../index.html">&larr; Back to Activities</a>
+            <a class="btn btn--ghost" href="https://shyramrbns.github.io/">&larr; Back to Portfolio</a>
+        </div>
+        <div class="container footer__legal">
+            <p>ALPHA FORM is an independent educational project and is not affiliated with Sony. Sony and Alpha are
+                trademarks of Sony Group Corporation.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal__backdrop" data-action="modal-close"></div>
+        <div class="modal__sheet" id="modalSheet">
+            <button class="icon-btn modal__close" type="button" data-action="modal-close"
+                aria-label="Close details">✕</button>
+            <div class="modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+        <div class="lightbox__backdrop" data-action="lb-close"></div>
+        <button class="icon-btn lightbox__close" type="button" data-action="lb-close"
+            aria-label="Close image viewer">✕</button>
+        <button class="icon-btn lightbox__nav lightbox__nav--prev" type="button" data-action="lb-prev"
+            aria-label="Previous image">‹</button>
+        <figure class="lightbox__fig">
+            <img id="lbImg" alt="">
+            <figcaption><span id="lbCap"></span><span class="lightbox__count" id="lbCount" aria-live="polite"></span>
+            </figcaption>
+        </figure>
+        <button class="icon-btn lightbox__nav lightbox__nav--next" type="button" data-action="lb-next"
+            aria-label="Next image">›</button>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
